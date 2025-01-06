@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .content {
+            display: none;
+            padding: 2rem;
+        }
+        .content.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body onload="showSection('home')">
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('web-activities')">Web Activities</a>
+        <a onclick="showSection('about-me')">About Me</a>
+    </nav>
+    <div class="content" id="home">
+        <h2>Home</h2>
+        <p>This website is a showcase of my web development activities and a brief introduction about me.</p>
+    </div>
+    <div class="content" id="web-activities">
+        <h2>Web Activities</h2>
+        <ul>
+            <li><a href="C:\Users\agote\Downloads\Agote, Ramir Angelo R\Activity 1.html" target="_blank">Activity 1: Curriculum Vitae</a></li>
+            <li><a href="C:\Users\agote\Downloads\Agote, Ramir Angelo R\Activity 2.html" target="_blank">Activity 2: My First Styled Page</a></li>
+            <li><a href="C:\Users\agote\Downloads\Agote, Ramir Angelo R\Activity 3.html" target="_blank">Activity 3: 3 Basic Parts of Computer</a></li>
+            <li><a href="C:\Users\agote\Downloads\Agote, Ramir Angelo R\Agote - Tourism Website\Agote - Tourism Website.html" target="_blank">Mid-Term Project</a></li>
+            <li><a href="C:\Users\agote\Downloads\Agote, Ramir Angelo R\Activity 4.html" target="_blank">Activity 4: TV Schedule</a></li>
+            <li><a href="C:\Users\agote\Downloads\Agote, Ramir Angelo R\Activity 5.html" target="_blank">Activity 5: Forms Site</a></li>
+        </ul>
+    </div>
+    <div class="content" id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I am Ramir Angelo R. Agote. I live in Brgy. San Isidro, Babatngon, Leyte. I am 19 years old. Welcome to my personal space, where I share my projects and activities.</p>
+    </div>
+</body>
+</html>
